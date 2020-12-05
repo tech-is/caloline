@@ -1,0 +1,24 @@
+stdClass::__set_state(array(
+   'events' => 
+  array (
+    0 => 
+    stdClass::__set_state(array(
+       'type' => 'message',
+       'replyToken' => '075faee2dada413d8b886bae1ad6d0a1',
+       'source' => 
+      stdClass::__set_state(array(
+         'userId' => 'U38cc2b7074e99ae4dcf6c1c700aaf072',
+         'type' => 'user',
+      )),
+       'timestamp' => 1606982942618,
+       'mode' => 'active',
+       'message' => 
+      stdClass::__set_state(array(
+         'type' => 'text',
+         'id' => '13137883090940',
+         'text' => '「自転車エルゴメーターを漕ぐ（きつめ：１５０ワット）」にする！',
+      )),
+    )),
+  ),
+   'destination' => 'U277212f020d141aa8465cb2098fa742c',
+))
