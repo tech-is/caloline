@@ -43,24 +43,30 @@
     <div class="module-spacer--large "></div>
     <div class="module-spacer--large "></div>
     <div class="module-spacer--large "></div>
-    <form action="" class="p-forms">
+    <form action="login" method="POST" class="p-forms">
+        <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
         <h2>ログイン</h2>
+        <?php if(isset($error_mess)): ?>
+            <div class="alert-danger" role="alert"><?= $error_mess; ?></div>
+        <?php endif;?>
         <div class="cp_inputText">
-            <input class="ef" type="text" placeholder="">
+            <input class="ef" type="text" name="mail" placeholder="">
             <label>メールアドレス</label>
+            <div class="alert-danger" role="alert"><?= form_error('mail');?></div>
             <span class="focus_line"></span>
         </div>
         <div class="cp_inputText">
-            <input class="ef" type="text" placeholder="">
+            <input class="ef" type="password" name="password" placeholder="">
             <label>パスワード</label>
+            <div class="alert-danger" role="alert"><?= form_error('password');?></div>
             <span class="focus_line"></span>
         </div>
-        <a class="p-btn-round p-icon__arrow-next" href="./login.html" role="button">ログインする</a>
+        <button type="submit" class="p-btn-round p-icon__arrow-next" role="button">ログインする</button>
+    </form>
         <div class="module-spacer--small"></div>
         <a class="p-forms__link" href="./signIn.html">新規の方はこちら</a>
         <div class="module-spacer--small"></div>
         <a class="p-forms__link" href="./signIn.html">パスワードを忘れた方はこちら</a>
-    </form>
     <div class="module-spacer--large"></div>
     <div class="module-spacer--large"></div>
     <footer class="footer">
