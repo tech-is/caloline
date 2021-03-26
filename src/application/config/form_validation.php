@@ -59,7 +59,28 @@ $config = array(
                     'numeric' => '数字を入力してください',
                 )
         )
-    )
+        
+    ),
+   'login' => array(
+        array(
+                'field' => 'mail',
+                'label' => 'メール',
+                'rules' => 'required|trim',
+                'errors' => array(
+                    'required' => '%sを入力してください',
+
+                )
+        ),
+        array(
+            'field' => 'password',
+            'label' => 'パスワード',
+            'rules' => 'required|trim',
+            'errors' => array(
+                'required' => '%sを入力してください',
+            )
+        ),
+
+   )
 );
 
 
