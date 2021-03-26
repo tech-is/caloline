@@ -34,7 +34,7 @@
                 </h1>
                 <ul>
                     <li><a href="/caloline/src/Caloline" target="_self">トップ</a></li>
-                    <li><a href="/caloine/src/Caloline/login" target="_self">ログイン</a></li>
+                    <li><a href="/caloline/src/Caloline/login" target="_self">ログイン</a></li>
                     <li><a href="/caloline/src/Caloline/sighup" target="_self">サインイン</a></li>
                 </ul>
             </nav>
@@ -43,51 +43,69 @@
     <div class="module-spacer--large "></div>
     <div class="module-spacer--large "></div>
     <div class="module-spacer--large "></div>
-    <form action="" class="p-forms">
-        <h2>サインイン</h2>
+    <form method="POST" action="" class="p-forms">
+        <h2>サインアップ</h2>
+        <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
+        <?php if(isset($success_mess)) :?>
+            <div class="alert alert-success" role="alert"><?= $success_mess?></div>
+        <?php endif; ?>    
         <div class="cp_inputText">
-            <input class="ef" type="text" placeholder="">
+            <input class="ef" type="text" name ="name" placeholder="">
             <label>ニックネーム</label>
+            <div class="alert-danger" role="alert"><?= form_error('name');?></div>
             <span class="focus_line"></span>
         </div>
         <div class="cp_inputText">
-            <input class="ef" type="text" placeholder="">
+            <input class="ef" type="text" name="mail" placeholder="">
             <label>メールアドレス</label>
+            <div class="alert-danger" role="alert"><?= form_error('mail');?></div>
             <span class="focus_line"></span>
         </div>
         <div class="cp_inputText">
-            <input class="ef" type="text" placeholder="">
-            <label>パスワード</label>
+            <input class="ef" type="password" name="password" placeholder="">
+            <label>パスワード(英数字８文字以上)</label>
+            <div class="alert-danger" role="alert"><?= form_error('password');?></div>
             <span class="focus_line"></span>
         </div>
         <div class="cp_inputText">
-            <input class="ef" type="text" placeholder="">
+            <input class="ef" type="password" name="conf_pass" placeholder="">
             <label>確認用パスワード</label>
-            <span class="focus_line"></span>
-        </div>
-        <div class="p-forms__gender_year">
-            <div class="cp_inputText">
-                <input class="ef" type="text" placeholder="">
-                <label>年齢</label>
-                <span class="focus_line"></span>
-            </div>
-            <div class="cp_inputText">
-                <input class="ef" type="text" placeholder="">
-                <label>性別</label>
-                <span class="focus_line"></span>
-            </div>
-        </div>
-        <div class="cp_inputText">
-            <input class="ef" type="text" placeholder="">
-            <label>体重</label>
+            <div class="alert-danger" role="alert"><?= form_error('conf_pass');?></div>
             <span class="focus_line"></span>
         </div>
         <div class="cp_inputText">
-            <input class="ef" type="text" placeholder="">
+            <input class="ef" type="text" name="first_weight" placeholder="">
+            <label>現在の体重</label>
+            <div class="alert-danger" role="alert"><?= form_error('first_weight');?></div>
+            <span class="focus_line"></span>
+        </div>
+        <div class="cp_inputText">
+            <input class="ef" type="text" name="target_weight" placeholder="">
             <label>目標体重</label>
+            <div class="alert-danger" role="alert"><?= form_error('target_weight');?></div>
+            <?php if(isset($error_mess)): ?>
+                <div class="alert-danger" role="alert"><?= $error_mess; ?></div>
+            <?php endif;?>
             <span class="focus_line"></span>
         </div>
-        <a class="p-btn-round p-icon__arrow-next" href="" role="button">登録する</a>
+        <div class="cp_inputText">
+            <input class="" type="checkbox" name="poss_menu[]" value="1">
+            <label>自転車を所有している(購入予定である)</label>
+        </div>
+        <div class="cp_inputText">
+            <input class="" type="checkbox" name="poss_menu[]" value="2">
+            <label>ロードバイク・クロスバイクを所有している（購入予定である）</label>
+        </div>
+        <div class="cp_inputText">
+            <input class="" type="checkbox" name="poss_menu[]" value="3">
+            <label>フィットネスクラブ・ジムに加入している（加入予定である）</label>
+        </div>
+        <div class="cp_inputText">
+            <input class=""  type="checkbox" name="poss_menu[]" value="4">
+            <label>縄跳びを所有している（購入予定である）</label>
+        </div>
+        <!--<a class="p-btn-round p-icon__arrow-next" href="" role="button">登録する</a> -->
+        <button type="submit" class="p-btn-round p-icon__arrow-next">登録する</button>
     </form>
     <div class="module-spacer--large"></div>
     <div class="module-spacer--large"></div>
