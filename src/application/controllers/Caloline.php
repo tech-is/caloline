@@ -7,7 +7,7 @@ class Caloline extends CI_Controller {
     {
         parent::__construct();
         $this->load->library('form_validation','session');
-        $this->load->helper('security','form', 'menu_helper');
+        $this->load->helper('security','form', );
         $this->load->model('Caloline_model');
     }
     
@@ -77,5 +77,11 @@ class Caloline extends CI_Controller {
         $this->load->view('profile_view');
     }
 
+    //ログアウト
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        header('Location: login');
+    }
 
 }

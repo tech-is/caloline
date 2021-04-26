@@ -36,6 +36,7 @@
                     <li><a href="#" target="_self">トップ</a></li>
                     <li><a href="#" target="_self">ログイン</a></li>
                     <li><a href="#" target="_self">サインイン</a></li>
+                    <li><a href="logout" target="_self">ログアウト</a></li>
                 </ul>
             </nav>
         </div>
