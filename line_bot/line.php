@@ -62,12 +62,7 @@ if ( $event_type === "postback" ) {
     try {
         // MySQLへの接続
         $dbh = new PDO('mysql:host=localhost;dbname=caloline', $user, $pass);
-        // ユーザIDを登録するSQL文作成
-
-
-        /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-        どこにinsertすればいいか分からない
-        ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+        // ユーザーを識別するためのIDを登録
         $sql = "INSERT INTO members(line_user_id) VALUES($user_id)";
         $res = $dbh->prepare($sql);
 
