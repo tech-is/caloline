@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="../css/style.css" rel="stylesheet">
-        <link href="../css/animate.css" rel="stylesheet">    
+        <link href="../css/animate.css" rel="stylesheet">   
+         
     <!-- Font Awesome Icons -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap&subset=latin-ext" rel="stylesheet">
+    
     <title>カロライン(メイン)</title>
 </head>
 <body>
@@ -33,14 +35,17 @@
                     </a>
                 </h1>
                 <ul>
-                    <li><a href="#" target="_self">トップ</a></li>
+                    <!-- <li><a href="#" target="_self">トップ</a></li>
                     <li><a href="#" target="_self">ログイン</a></li>
-                    <li><a href="#" target="_self">サインイン</a></li>
+                    <li><a href="#" target="_self">サインイン</a></li> -->
                     <li><a href="logout" target="_self">ログアウト</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <main>
+        <canvas id="myChart"></canvas>
+    </main>
     <footer class="footer">
         <div class="main c-section">
             <div class="main-inner">
@@ -128,8 +133,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/ja.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="../js/animate.js" type="text/javascript"></script>
     <script src="../js/carousel.js" type="text/javascript"></script>
     <script src="../js/menu.js" type="text/javascript"></script>
+    <script src="../js/chart.js" type="text/javascript"></script>
 </body>
 </html>
